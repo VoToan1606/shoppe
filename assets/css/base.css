@@ -1,0 +1,148 @@
+:root{
+    --while-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --primary-color:#ee4d2d;
+    --border-color:#dbdbdb;
+    --header-height:120px;
+    --navbar-height:34px;
+    --header-with-search-height:86px;
+
+}
+
+*{
+    box-sizing: initial;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    margin-left: -5px;
+    margin-right: -5px; 
+}
+
+.grid__wrap{
+    flex-wrap: wrap;
+}
+
+.grid__column-2{
+    width: 16.6667%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid__column-2-4{
+    width: 19%;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+.grid__column-2-5{
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+.grid__column-10{
+    width: 83.3334%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+
+    }
+    
+    to{
+        opacity: 1;
+
+     }
+}
+
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+
+    }
+    
+    to{
+        transform: scale(var(--growth-to));
+
+     }
+}
+
+@keyframes fadeInModal{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+
+    }
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+     }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+
+}
+
+.modal__body{
+    margin: auto;
+    background: var(--while-color);
+    z-index: 1;
+
+}
+
+.btn{
+    font-size: 1.4rem;
+    border: none;
+    height: 36px;
+    min-width: 124px;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background: var(--while-color);
+}
+
+.btn--hover:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+.btn--primary{
+    background: var(--primary-color);
+    color: var(--while-color);
+}
