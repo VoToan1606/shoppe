@@ -1,0 +1,209 @@
+/* mobile and tablet */
+@media (max-width:1023px){
+   .hide-on-mobile-tablet{
+       display: none;
+   }
+
+   :root{
+    --header-height:86px;
+    --navbar-height:0px;
+   }
+
+   .header__cart-list{
+       position: fixed;
+       top: var(--header-height);
+       right: 0;
+       width: 100%;
+       padding-left: calc((100% - 702px) / 2);
+   }
+
+   .header__cart-list::after{
+       display: none;
+   }
+
+   .header{
+       position: fixed;
+       top: 0;
+       right: 0;
+       left: 0;
+       z-index: 10;
+   }
+
+   .container{
+       margin-top: calc(var(--header-height) + 60px);
+   }
+
+   .header__sort-bar{
+       display: flex;
+   }
+
+   .container__move {
+        padding-top: 10px;
+    }
+
+    .header__cart-wrap{
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .header__logo {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-category{
+        display: flex;
+    }
+
+   
+}
+
+/* tablet */
+@media (min-width:740px) and (max-width:1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+
+    .header__cart {
+        text-align: right;
+        width: 85px;
+    }
+}
+
+/* mobile */
+@media (max-width:739px){
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .header__search{
+        position: fixed;
+        top: 87px;
+        z-index: 3;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+        height: 57px;
+        left: 0;
+        right: 0;
+        display: none;
+        animation: mobileSearch linear 0.2s;
+    }
+
+    .header-with-search{
+        justify-content: space-between;
+    }
+    .header__cart,
+    .header__logo{
+        width: unset;
+    }
+
+    .header__cart-wrap{
+        padding: 20px;
+    }
+
+    .header__cart-notice{
+        right: 2px;
+        top: 7px;
+    }
+
+    .category{
+        display: none;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .header__search-select{
+        margin-right: 23px;
+    }
+
+    .header__search-with-search{
+        margin-right: 20px;
+    }
+
+     .mobile-icon-search:checked ~.header__search{
+        display: flex;
+    } 
+
+    @keyframes mobileSearch {
+        from{
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .mobile-search{
+        display: block;
+    }
+
+    .header__search-input{
+        padding-left: 40px;
+    }
+
+    .header__search-history{
+        padding-left: 16px;
+        position: fixed;
+        top: 146px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    }
+
+    .header__cart-icon{
+        font-size: 2.6rem;
+    }
+
+    .home-filter{
+        display: none;
+    }
+
+    .pagination-item{
+        margin: 0;
+    }
+
+    .pagination-item__link{
+        font-size: 1.6rem;
+        min-width: 36px;
+        height: 28px;
+    }
+
+    .container__move{
+        margin: 0 4px;
+    }
+
+    .header-with-search__shopee-logo{
+        width: 110px;
+    }
+
+    .footer{
+        padding: 0 16px;
+    }
+
+    .footer-intruduce__heading-list{
+        display: none;
+    }
+
+    .footer-intruduce-logo__imgs{
+        margin: 0 10px;
+    }
+
+    .footer-introduce{
+        padding-top: 0;
+    }
+
+    .footer-intruduce-logo{
+        margin-top: 24px;
+    }
+    .footer__dowload-qr{
+        display: none;
+    }
+
+    .footer__dowload-apps{
+        margin: 0;
+    }
+
+}

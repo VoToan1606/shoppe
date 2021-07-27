@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shoppe</title>
+    <link  rel = " icon " href = "https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/217807088_1269567460168090_1606734653232283065_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=gp9kkXTRo74AX-1quhW&tn=pewD_HLUiFlI8i8y&_nc_ht=scontent-hkg4-2.xx&oh=a4e8a95dfb7375a6c0627fa6bc8e38e7&oe=61202BFF" type = " image / x-icon " />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
    <link rel="stylesheet" href="./assets/css/base.css">
+   <link rel="stylesheet" href="./assets/css/grid.css">
    <link rel="stylesheet" href="./assets/css/main.css">
+   <link rel="stylesheet" href="./assets/css/responsive.css">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr header__navbar-item--seprate">
                             Vào cửa hàng trên ứng dụng Shopee 
@@ -108,7 +111,27 @@
                     </ul>
                 </nav>
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-check" class="mobile-menu">
+                        <i class="fas fa-bars mobile-menu__icon"></i>
+                    </label>
+                    <input type="checkbox" name="" id="mobile-check" class="mobile-icon-check">
+                    <label for="mobile-input-search" class="mobile-search">
+                        <i class="fas fa-search mobile-search-icon"></i>
+                    </label>
+                    <input type="checkbox" name="" id="mobile-input-search" class="mobile-icon-search">
+                     <label for="mobile-check" class="modal-mobile">
+                     </label> 
+                    <div class="modal-mobile__list">
+                        <ul class="modal-mobile-list">
+                            <li class="modal-mobile-item">Đăng Nhập</li>
+                            <li class="modal-mobile-item">Đăng Xuất</li>
+                            <li class="modal-mobile-item">Cài Đặt</li>
+                            <li class="modal-mobile-item">Trợ giúp</li>
+                        </ul>
+                    </div>
+
+                   
+                    <div class="header__logo hide-on-tablet">
                        <a href="/" class="header__logo-link">
                         <svg viewBox="0 0 192 65" class=" header-with-search__shopee-logo ">
                             <g fill-rule="evenodd">
@@ -224,12 +247,27 @@
                 </div>
 
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active ">
+                    <a href="" class="header__sort-link header__sort-link--active">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
+            
         </header>
 
         <div class="container">
-            <div class="grid">
-                <div class="grid__row container__move">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter container__move">
+                    <div class="col l-2 m-0 c-0">
                         <div class="category">
                             <h3 class="category-heading">
                                 <i class="category-heading-icon fas fa-list"></i>
@@ -254,7 +292,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
                        <div class="home-filter">
                            <span class="home-filter__label">Sắp xếp theo</span>
                            <button class="btn home-filter__btn">Phổ biến</button>
@@ -288,9 +326,51 @@
 
                             </div>
                        </div>
+
+                       <nav class="mobile-category">
+                           <ul class="mobile-catelory-list">
+                               <li class="mobile-catelory-item">
+                                   <a href="" class="mobile-catelory__link">Top SP bán chạy</a>
+                                </li>
+                                <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Giày bóng đá</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Áo bóng đá</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Phụ kiện thể thao</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Ba lo</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Túi sách</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Giày đá bóng sân cỏ nhân tạo</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Nón</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Áo chống thoát mồ hôi</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Giày đinh</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Giày nike</a>
+                                 </li>
+                                 <li class="mobile-catelory-item">
+                                    <a href="" class="mobile-catelory__link">Giày xịn</a>
+                                 </li>
+                           </ul>
+                       </nav>
+
                        <div class="home-product">
-                           <div class="grid__row grid__wrap">
-                               <div class="grid__column-2-4">
+                           <div class="row sm-gutter grid__wrap">
+                               <div class="col l-2-4 m-4 c-6">
                                    <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/2d862f946748d7111bff169e98c521c5_tn');"></div>
                                         <h4 class="home-product-item__name">Giày Đá Bóng Sân Cỏ Nhân Tạo Propuision [Full-Box]</h4>
@@ -330,7 +410,7 @@
                                         </div>
                                     </a>
                                </div>
-                               <div class="grid__column-2-4">
+                               <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/13e5a9eebb1059d7b5b9cd321e2fc7bd_tn');"></div>
                                      <h4 class="home-product-item__name">Tất chống Trơn Vớ Đá Banh Chống Trơn Trượt Kháng Khuẩn Và Bảo Vệ Tránh Lật Cổ Chân</h4>
@@ -370,7 +450,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/83c138a46c0fdd65d511c8e681ec1db4_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng Predator chính hãng - Giày đá banh sân cỏ nhân tạo Full size 7 màu sắc</h4>
@@ -410,7 +490,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/d0dda342c9c2f082a8934bf52942f440_tn');"></div>
                                      <h4 class="home-product-item__name">Túi Rút Đựng Đồ Thể Thao Túi Dây Rút, Balo Dây Rút 2 Lớp Chống Thấm Nước Tốt</h4>
@@ -450,7 +530,7 @@
                                      </div> -->
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/fcb5db9c52b6666fac870bc035776dd8_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng wika neo quang hải - giày đá banh sân cỏ nhân tạo</h4>
@@ -490,7 +570,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/9f6ef158f03ffc4ca0c22650a4df9596_tn');"></div>
                                      <h4 class="home-product-item__name">Túi đéo chéo - túi đựng giày thể thao</h4>
@@ -529,7 +609,7 @@
                                      </div> -->
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/f1345d9946d1c563621cbb1f77b7b9bd_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng 3 sọc TF size 38 - 43 khâu full đế</h4>
@@ -538,9 +618,9 @@
                                              <span class="home-product-item__price-old">300.000đ</span>
                                             <span class="home-product-item__price-current">149.000đ</span>
                                          </div>
-                                         <div class="home-product-item__free-ship">
+                                         <!-- <div class="home-product-item__free-ship">
                                              <svg height="12" viewBox="0 0 20 12" width="20" class="shopee-svg-icon icon-free-shipping"><g fill="none" fill-rule="evenodd" transform=""><rect fill="#00bfa5" fill-rule="evenodd" height="9" rx="1" width="12" x="4"></rect><rect height="8" rx="1" stroke="#00bfa5" width="11" x="4.5" y=".5"></rect><rect fill="#00bfa5" fill-rule="evenodd" height="7" rx="1" width="7" x="13" y="2"></rect><rect height="6" rx="1" stroke="#00bfa5" width="6" x="13.5" y="2.5"></rect><circle cx="8" cy="10" fill="#00bfa5" r="2"></circle><circle cx="15" cy="10" fill="#00bfa5" r="2"></circle><path d="m6.7082481 6.7999878h-.7082481v-4.2275391h2.8488017v.5976563h-2.1405536v1.2978515h1.9603297v.5800782h-1.9603297zm2.6762505 0v-3.1904297h.6544972v.4892578h.0505892c.0980164-.3134765.4774351-.5419922.9264138-.5419922.0980165 0 .2276512.0087891.3003731.0263672v.6210938c-.053751-.0175782-.2624312-.038086-.3762568-.038086-.5122152 0-.8758247.3017578-.8758247.75v1.8837891zm3.608988-2.7158203c-.5027297 0-.8536919.328125-.8916338.8261719h1.7390022c-.0158092-.5009766-.3446386-.8261719-.8473684-.8261719zm.8442065 1.8544922h.6544972c-.1549293.571289-.7050863.9228515-1.49238.9228515-.9864885 0-1.5903965-.6269531-1.5903965-1.6464843 0-1.0195313.6165553-1.6669922 1.5872347-1.6669922.9580321 0 1.5366455.6064453 1.5366455 1.6083984v.2197266h-2.4314412v.0351562c.0221328.5595703.373095.9140625.9169284.9140625.4110369 0 .6924391-.1376953.8189119-.3867187zm2.6224996-1.8544922c-.5027297 0-.853692.328125-.8916339.8261719h1.7390022c-.0158091-.5009766-.3446386-.8261719-.8473683-.8261719zm.8442064 1.8544922h.6544972c-.1549293.571289-.7050863.9228515-1.49238.9228515-.9864885 0-1.5903965-.6269531-1.5903965-1.6464843 0-1.0195313.6165553-1.6669922 1.5872347-1.6669922.9580321 0 1.5366455.6064453 1.5366455 1.6083984v.2197266h-2.4314412v.0351562c.0221328.5595703.373095.9140625.9169284.9140625.4110369 0 .6924391-.1376953.8189119-.3867187z" fill="#fff"></path><path d="m .5 8.5h3.5v1h-3.5z" fill="#00bfa5"></path><path d="m0 10.15674h3.5v1h-3.5z" fill="#00bfa5"></path><circle cx="8" cy="10" fill="#047565" r="1"></circle><circle cx="15" cy="10" fill="#047565" r="1"></circle></g></svg>
-                                             </div>
+                                             </div> -->
                                      </div>
                                      <div class="home-product-item__action">
                                          <span class="home-product-item__like">
@@ -569,7 +649,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/6ff13d2842773002917087846dd82001_tn');"></div>
                                      <h4 class="home-product-item__name">Túi đeo chéo nam nữ MLB - Túi bao tử thời trang hàn quốc thêu chữ NY 3D</h4>
@@ -594,7 +674,7 @@
                                              <i class="home-product-item__star-gold fas fa-star"></i>
                                              <i class="home-product-item__star-gold fas fa-star"></i>
                                          </div>
-                                         <span class="home-product-item__sold">Đã bán 2</span>
+                                         <span class="home-product-item__sold">Đã bán 20</span>
                                      </div>
                                      <div class="home-product-item__origin">
                                          <span class="home-product-item__origin-name">Hà nội</span>
@@ -609,7 +689,7 @@
                                      </div> -->
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/74197b82f6e5da8fb72ddf1d799ac980_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng Xgosted.1 bản Tsubasa đế TF size 39 - 43</h4>
@@ -649,7 +729,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/247eefc8f4e2174c175693a024ef8337_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng Mizuno MORELIA NEO III PRO AS - giày đá banh sân cỏ nhân tạo [Full Box]</h4>
@@ -674,7 +754,7 @@
                                              <i class="home-product-item__star-gold fas fa-star"></i>
                                              <i class="fas fa-star"></i>
                                          </div>
-                                         <span class="home-product-item__sold">Đã bán 1</span>
+                                         <span class="home-product-item__sold">Đã bán 12</span>
                                      </div>
                                      <div class="home-product-item__origin">
                                          <span class="home-product-item__origin-name">Hà nội</span>
@@ -689,7 +769,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/d4dd38c592ee7ee4cdac7630674664d8_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng sân cỏ nhân tạo X 19.1 TF [Full-Box]</h4>
@@ -729,7 +809,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/c9cc29f11444bd6d1efd4ad357782179_tn');"></div>
                                      <h4 class="home-product-item__name">Giày Đá Bóng Sân Cỏ Nhân Tạo X Ghosted TF Full Box</h4>
@@ -769,7 +849,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/f3566158bd2d22629b51e3b4f9a3dcf6_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng Nemeziz 18.3 Full size 4 màu đế TF</h4>
@@ -809,7 +889,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/281f3f637826bc321ef7ed2d932e857b_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng sân cỏ nhân tạo SuperSpeed - Giày đá banh đế TF</h4>
@@ -818,9 +898,9 @@
                                              <span class="home-product-item__price-old">689.000đ</span>
                                             <span class="home-product-item__price-current">347.000đ</span>
                                          </div>
-                                         <div class="home-product-item__free-ship">
+                                         <!-- <div class="home-product-item__free-ship">
                                              <svg height="12" viewBox="0 0 20 12" width="20" class="shopee-svg-icon icon-free-shipping"><g fill="none" fill-rule="evenodd" transform=""><rect fill="#00bfa5" fill-rule="evenodd" height="9" rx="1" width="12" x="4"></rect><rect height="8" rx="1" stroke="#00bfa5" width="11" x="4.5" y=".5"></rect><rect fill="#00bfa5" fill-rule="evenodd" height="7" rx="1" width="7" x="13" y="2"></rect><rect height="6" rx="1" stroke="#00bfa5" width="6" x="13.5" y="2.5"></rect><circle cx="8" cy="10" fill="#00bfa5" r="2"></circle><circle cx="15" cy="10" fill="#00bfa5" r="2"></circle><path d="m6.7082481 6.7999878h-.7082481v-4.2275391h2.8488017v.5976563h-2.1405536v1.2978515h1.9603297v.5800782h-1.9603297zm2.6762505 0v-3.1904297h.6544972v.4892578h.0505892c.0980164-.3134765.4774351-.5419922.9264138-.5419922.0980165 0 .2276512.0087891.3003731.0263672v.6210938c-.053751-.0175782-.2624312-.038086-.3762568-.038086-.5122152 0-.8758247.3017578-.8758247.75v1.8837891zm3.608988-2.7158203c-.5027297 0-.8536919.328125-.8916338.8261719h1.7390022c-.0158092-.5009766-.3446386-.8261719-.8473684-.8261719zm.8442065 1.8544922h.6544972c-.1549293.571289-.7050863.9228515-1.49238.9228515-.9864885 0-1.5903965-.6269531-1.5903965-1.6464843 0-1.0195313.6165553-1.6669922 1.5872347-1.6669922.9580321 0 1.5366455.6064453 1.5366455 1.6083984v.2197266h-2.4314412v.0351562c.0221328.5595703.373095.9140625.9169284.9140625.4110369 0 .6924391-.1376953.8189119-.3867187zm2.6224996-1.8544922c-.5027297 0-.853692.328125-.8916339.8261719h1.7390022c-.0158091-.5009766-.3446386-.8261719-.8473683-.8261719zm.8442064 1.8544922h.6544972c-.1549293.571289-.7050863.9228515-1.49238.9228515-.9864885 0-1.5903965-.6269531-1.5903965-1.6464843 0-1.0195313.6165553-1.6669922 1.5872347-1.6669922.9580321 0 1.5366455.6064453 1.5366455 1.6083984v.2197266h-2.4314412v.0351562c.0221328.5595703.373095.9140625.9169284.9140625.4110369 0 .6924391-.1376953.8189119-.3867187z" fill="#fff"></path><path d="m .5 8.5h3.5v1h-3.5z" fill="#00bfa5"></path><path d="m0 10.15674h3.5v1h-3.5z" fill="#00bfa5"></path><circle cx="8" cy="10" fill="#047565" r="1"></circle><circle cx="15" cy="10" fill="#047565" r="1"></circle></g></svg>
-                                             </div>
+                                             </div> -->
                                      </div>
                                      <div class="home-product-item__action">
                                          <span class="home-product-item__like">
@@ -849,7 +929,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/e6903f189bdce078fe242f6cfd267c69_tn');"></div>
                                      <h4 class="home-product-item__name">Túi xách nữ, túi đeo chéo cao cấp MLB phong cách Hàn Quốc cực sang chảnh [Full Box]</h4>
@@ -889,7 +969,7 @@
                                      </div> -->
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/83e917b248bc51b66b041d55a7aa51e9_tn');"></div>
                                      <h4 class="home-product-item__name">Giày đá bóng Mizuno MORELIA NEO III PRO AS - giày đá banh sân cỏ nhân tạo [Full Box]</h4>
@@ -898,9 +978,9 @@
                                              <span class="home-product-item__price-old">349.000đ</span>
                                             <span class="home-product-item__price-current">179.900đ</span>
                                          </div>
-                                         <div class="home-product-item__free-ship">
+                                         <!-- <div class="home-product-item__free-ship">
                                              <svg height="12" viewBox="0 0 20 12" width="20" class="shopee-svg-icon icon-free-shipping"><g fill="none" fill-rule="evenodd" transform=""><rect fill="#00bfa5" fill-rule="evenodd" height="9" rx="1" width="12" x="4"></rect><rect height="8" rx="1" stroke="#00bfa5" width="11" x="4.5" y=".5"></rect><rect fill="#00bfa5" fill-rule="evenodd" height="7" rx="1" width="7" x="13" y="2"></rect><rect height="6" rx="1" stroke="#00bfa5" width="6" x="13.5" y="2.5"></rect><circle cx="8" cy="10" fill="#00bfa5" r="2"></circle><circle cx="15" cy="10" fill="#00bfa5" r="2"></circle><path d="m6.7082481 6.7999878h-.7082481v-4.2275391h2.8488017v.5976563h-2.1405536v1.2978515h1.9603297v.5800782h-1.9603297zm2.6762505 0v-3.1904297h.6544972v.4892578h.0505892c.0980164-.3134765.4774351-.5419922.9264138-.5419922.0980165 0 .2276512.0087891.3003731.0263672v.6210938c-.053751-.0175782-.2624312-.038086-.3762568-.038086-.5122152 0-.8758247.3017578-.8758247.75v1.8837891zm3.608988-2.7158203c-.5027297 0-.8536919.328125-.8916338.8261719h1.7390022c-.0158092-.5009766-.3446386-.8261719-.8473684-.8261719zm.8442065 1.8544922h.6544972c-.1549293.571289-.7050863.9228515-1.49238.9228515-.9864885 0-1.5903965-.6269531-1.5903965-1.6464843 0-1.0195313.6165553-1.6669922 1.5872347-1.6669922.9580321 0 1.5366455.6064453 1.5366455 1.6083984v.2197266h-2.4314412v.0351562c.0221328.5595703.373095.9140625.9169284.9140625.4110369 0 .6924391-.1376953.8189119-.3867187zm2.6224996-1.8544922c-.5027297 0-.853692.328125-.8916339.8261719h1.7390022c-.0158091-.5009766-.3446386-.8261719-.8473683-.8261719zm.8442064 1.8544922h.6544972c-.1549293.571289-.7050863.9228515-1.49238.9228515-.9864885 0-1.5903965-.6269531-1.5903965-1.6464843 0-1.0195313.6165553-1.6669922 1.5872347-1.6669922.9580321 0 1.5366455.6064453 1.5366455 1.6083984v.2197266h-2.4314412v.0351562c.0221328.5595703.373095.9140625.9169284.9140625.4110369 0 .6924391-.1376953.8189119-.3867187z" fill="#fff"></path><path d="m .5 8.5h3.5v1h-3.5z" fill="#00bfa5"></path><path d="m0 10.15674h3.5v1h-3.5z" fill="#00bfa5"></path><circle cx="8" cy="10" fill="#047565" r="1"></circle><circle cx="15" cy="10" fill="#047565" r="1"></circle></g></svg>
-                                             </div>
+                                             </div> -->
                                      </div>
                                      <div class="home-product-item__action">
                                          <span class="home-product-item__like">
@@ -914,7 +994,7 @@
                                              <i class="home-product-item__star-gold fas fa-star"></i>
                                              <i class="fas fa-star"></i>
                                          </div>
-                                         <span class="home-product-item__sold">Đã bán 106</span>
+                                         <span class="home-product-item__sold">Đã bán 6</span>
                                      </div>
                                      <div class="home-product-item__origin">
                                          <span class="home-product-item__origin-name">Hà nội</span>
@@ -929,7 +1009,7 @@
                                      </div>
                                  </a>
                             </div>
-                            <div class="grid__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="#">
                                      <div class="home-product-item__img" style="background-image: url('https://cf.shopee.vn/file/bbfc57ace60e9c0724fa8c3be1cce7f5_tn');"></div>
                                      <h4 class="home-product-item__name">Túi Đựng Giày Đá Bóng 2 Ngăn Câu Lạc Bộ, Túi Hai Ngăn Bóng Đá, Thể Thao, Đá Banh</h4>
@@ -1012,9 +1092,9 @@
 
         </div>
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                       <div class="grid__column-2-5">
+            <div class="grid wide">
+                <div class="row mt-6">
+                       <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1031,7 +1111,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-5">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Về Shoppe</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1048,13 +1128,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-5">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Thanh toán</h3>
                             <img src="https://channel.mediacdn.vn/2018/12/5/photo-2-15440044092002057265011.jpg" alt="" class="footer__img">
         
                            
                         </div>
-                        <div class="grid__column-2-5">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1077,7 +1157,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-5">
+                        <div class="col l-2-4 m-4 c-12 ">
                             <h3 class="footer__heading">Tải ứng dụng shoppe ngay thôi</h3>
                             <div class="footer__dowload">
                                 <img src="./assets/img/qr.png" alt="" class="footer__dowload-qr">
@@ -1113,7 +1193,6 @@
                     CHÍNH SÁCH TRẢ HÀNG VÀ NHẬN TIỀN
                </div>         
             </div>
-
             <div class="footer-intruduce-logo">
                 <div class="footer-intruduce-logo__imgs">
                     <img src="https://cdn.dangkywebsitevoibocongthuong.com/wp-content/uploads/2018/06/logo.png" alt="" class="footer-intruduce-logo__img">
